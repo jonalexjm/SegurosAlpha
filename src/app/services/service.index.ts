@@ -1,0 +1,1 @@
+export { DataService } from './shared/data.service';

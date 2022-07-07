@@ -1,0 +1,51 @@
+<div class="max-w-2xl rounded overflow-hidden shadow-lg">
+  <div class="px-8 py-4">
+    <div class="font-bold text-xl mb-2">List Person</div>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                  <th scope="col" class="px-6 py-3">
+                      NickName
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Date
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                      Status
+                  </th>       
+                  <th></th>           
+              </tr>
+          </thead>
+          <tbody>                         
+              <tr *ngFor="let item of userList; let indexOfelement=index; ">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                  {{item.nikacc}} 
+                </th>
+                <td class="px-6 py-4">
+                  {{item.freacc}}
+                </td>
+                <td class="px-6 py-4">
+                  {{item.estacc}}
+                </td>       
+                <td class="px-6 py-4 text-right">
+                  <!-- <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View Detail</a> -->
+                  <button (click)="openModal(indexOfelement)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                    View Detail
+                  </button>
+                </td>
+              </tr>          
+          </tbody>
+      </table>
+  </div>
+  </div>
+</div>
+
+
+<div class="" *ngIf="modalSwitch">
+  <app-modal [userId] = "this.userId"></app-modal>
+</div>
+
+
+
+

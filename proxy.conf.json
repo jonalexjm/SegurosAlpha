@@ -1,0 +1,8 @@
+{
+    "/Acceso/*":{
+        "target" : "http://18.220.1.191",
+        "secure" : false,
+        "logLevel" : "debug"
+
+    }
+}
